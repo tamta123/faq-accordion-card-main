@@ -11,13 +11,17 @@ body {
 }
 
 main {
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
   border-radius: 23px;
   padding: 0px 24px 30px 24px;
   position: relative;
+}
+
+.desktop {
+  display: none;
 }
 
 .woman {
@@ -68,6 +72,7 @@ h2 {
 
 h2:hover {
   color: rgba(244, 123, 86, 1);
+  cursor: pointer;
 }
 
 p {
@@ -101,12 +106,15 @@ p {
 }
 
 @media screen and (min-width: 1440px) {
+  body {
+    padding: 129px 239px 130px 281px;
+  }
   main {
-    background: #ffffff;
-    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
-    border-radius: 23px;
-    display: grid;
-    /* grid-column-t; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
   }
 
   .woman,
@@ -114,8 +122,44 @@ p {
     display: none;
   }
 
+  .desktop {
+    display: block;
+  }
+
+  .pattern {
+    width: 964px;
+    height: 944px;
+    margin-top: -294px;
+    position: left;
+    margin-left: -576px;
+    margin-bottom: -141px;
+  }
+
+  .woman {
+    width: 472px;
+    height: 359px;
+    position: absolute;
+    top: 70px;
+    left: 150.86px;
+  }
+  .box {
+    z-index: 10;
+    position: absolute;
+    width: 190px;
+    height: 206px;
+    left: -100px;
+    top: 206px;
+  }
+
+  .illustration {
+    object-fit: cover;
+    width: 190px;
+    height: 206px;
+    position: fixed;
+  }
   .text {
     width: 50%;
-    position: left;
+    padding-bottom: 53px;
+    padding-right: 71px;
   }
 }
