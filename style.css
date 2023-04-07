@@ -11,6 +11,8 @@ body {
 }
 
 main {
+  /* display: flex;
+  flex-direction: column; */
   background: #ffffff;
   box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
   border-radius: 23px;
@@ -25,7 +27,7 @@ main {
   position: absolute;
   top: -20%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(-2deg);
 }
 
 .shadow {
@@ -35,7 +37,7 @@ main {
   object-fit: fill;
   top: -5%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(-2deg);
 }
 
 h1 {
@@ -96,4 +98,24 @@ p {
 
 .active + p {
   display: block;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    background: #ffffff;
+    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+    border-radius: 23px;
+    display: grid;
+    /* grid-column-t; */
+  }
+
+  .woman,
+  .shadow {
+    display: none;
+  }
+
+  .text {
+    width: 50%;
+    position: left;
+  }
 }
